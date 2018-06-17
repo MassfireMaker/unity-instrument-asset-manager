@@ -16,7 +16,7 @@ public class InstrumentDictionary : MonoBehaviour {
     List<string> assetPaths = new List<string>();
 
     // Use this for initialization
-    void Start () {
+    void Awake () {
 
         // TODO: Create InstrumentAssets folder structure && assetPaths.txt if not present
 
