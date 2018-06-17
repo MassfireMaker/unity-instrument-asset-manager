@@ -18,6 +18,8 @@ public class InstrumentDictionary : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
+        // TODO: Create InstrumentAssets folder structure && assetPaths.txt if not present
+
         // Store all asset files for instruments
         rawInstrumentFiles = Resources.LoadAll("InstrumentAssets");
 
