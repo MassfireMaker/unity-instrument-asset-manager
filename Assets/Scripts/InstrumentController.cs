@@ -27,16 +27,15 @@ public class InstrumentController : MonoBehaviour
         {
             Debug.LogError("Missing reference to InstrumentDictionary! Assign in my inspector", this);
         }
-        else
-        {
-            // Get a random instrument from the provided family
-            instrument = dictionary.GetRandomInstrumentByFamily(instrumentFamilyToPickFrom);
-        }
+      
     }
 
 
     private void SetSpriteAndPlayAudio()
     {
+        // Get a random instrument from the provided family
+        instrument = dictionary.GetRandomInstrumentByFamily(instrumentFamilyToPickFrom);
+        // Use assets on me
         GetComponent<Image>().sprite = instrument.Image;
         GetComponent<AudioSource>().PlayOneShot(instrument.Sound);
 
